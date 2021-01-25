@@ -67,9 +67,9 @@ int main(void)
     else if ( schedule >= 12 && schedule < 18 )
     {
         textcolor(YELLOW);
-        printf("\n|=================================================== |\n");
+        printf("\n|======================================================|\n");
         printf("|Good afternoon now it's %d:%i hours, have a great job!|", schedule, minuts);
-        printf("\n|=================================================== |\n");
+        printf("\n|======================================================|\n");
     }
     else if ( schedule >= 18 && schedule < 23 )
     {
