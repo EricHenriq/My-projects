@@ -1,7 +1,7 @@
 /*
-    [X] Welcome v2.6.15 [X]
-    Welcome program for my computer
-    = Jan 24, 2021 =
+    [X] StartUp v2.6.15 [X]
+    Startup program for my computer.
+    = Jan 25, 2021 =
 
 -- Coded by Eric Henrique 
 */
@@ -54,8 +54,7 @@ int main(void)
 
     setlocale(LC_ALL, "English");
 
-    SetConsoleTitle("Open program in my machine.");
-
+    SetConsoleTitle("Startup program for my computer.");
     // Struct GM, GA, GN for UX
 
     if ( schedule >= 00 && schedule < 12 )
