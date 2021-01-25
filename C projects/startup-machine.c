@@ -1,6 +1,6 @@
 /*
-    [X] StartUp v2.6.12 [X]
-    Startup program for my computer.
+    [X] Welcome v2.6.15 [X]
+    Welcome program for my computer
     = Jan 24, 2021 =
 
 -- Coded by Eric Henrique 
@@ -54,16 +54,16 @@ int main(void)
 
     setlocale(LC_ALL, "English");
 
-    SetConsoleTitle("Startup program for my computer.");
+    SetConsoleTitle("Open program in my machine.");
 
     // Struct GM, GA, GN for UX
 
     if ( schedule >= 00 && schedule < 12 )
     {   
         textcolor(LIGHT_BLUE);
-        printf("\n|================================================= |\n");
-        printf("|Good morning now it's %d:%M hours, have a great job!|", schedule, minuts);
-        printf("\n|================================================= |\n");
+        printf("\n|===================================================|\n");
+        printf("|Good morning now it's %d:%i hours, have a great job!|", schedule, minuts);
+        printf("\n|===================================================|\n");
     }
     else if ( schedule >= 12 && schedule < 18 )
     {
@@ -88,7 +88,8 @@ int main(void)
     printf("|=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
     printf("|1. Software to organization|\n");
     printf("|2. Open Chrome             |\n");
-    printf("|3. Close this program      |\n");
+    printf("|3. Open Visual Studio Code |\n");
+    printf("|4. Close this program      |\n");
     printf("+=-=-=-=-=-=-=-=-=-=-=-=-=-=+\n");
 
 
@@ -101,23 +102,30 @@ int main(void)
     switch (opc)
     {
         case 1:
-            system("start Notion"); // I use notion
+            system("start notion"); // I use Notion
             textcolor(BLUE);
-            printf("Opening Notion...");
+            printf("Opening Notion...\n");
             sleep(8);
         break;
 
         case 2:
             system("start chrome");
             textcolor(DARK_GRAY);
-            printf("Opening Google Chrome...");
+            printf("Opening Google Chrome...\n");
             sleep(8);
         break;
 
         case 3:
-            system("Exit");
+            system("start code");
+            textcolor(LIGHT_CYAN);
+            printf("Opening Visual Studio Code...\n");
+            sleep(8);
         break;
 
+        case 4:
+            system("Exit");
+        break;
+        
         default:
             textcolor(RED);
             printf("Invalid command!\n");
