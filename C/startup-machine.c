@@ -1,9 +1,26 @@
 /*
-    [X] StartUp v2.6.15 [X]
-    Startup program for my computer.
-    = Jan 25, 2021 =
+MIT License
 
--- Coded by Eric Henrique 
+Copyright (c) 2021 Eric Henrique
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 */
 
 #include <stdio.h>
@@ -13,6 +30,10 @@
 #include <time.h>
 #include <conio.h>
 #include <unistd.h>
+#define NAME "StartUp"
+#define VERSION "2.6.16"
+#define AUTHOR "Eric Henrique"
+#define MODIFIED "Mar 06, 2021"
 
 // Colors of DOS
 
@@ -54,15 +75,16 @@ int main(void)
 
     setlocale(LC_ALL, "English");
 
-    SetConsoleTitle("Startup program for my computer.");
+    SetConsoleTitle("Open program in my machine.");
+
     // Struct GM, GA, GN for UX
 
     if ( schedule >= 00 && schedule < 12 )
     {   
         textcolor(LIGHT_BLUE);
-        printf("\n|===================================================|\n");
+        printf("\n|====================================================|\n");
         printf("|Good morning now it's %d:%i hours, have a great job!|", schedule, minuts);
-        printf("\n|===================================================|\n");
+        printf("\n|====================================================|\n");
     }
     else if ( schedule >= 12 && schedule < 18 )
     {
@@ -101,7 +123,7 @@ int main(void)
     switch (opc)
     {
         case 1:
-            system("start notion"); // I use Notion
+            system("start Notion");
             textcolor(BLUE);
             printf("Opening Notion...\n");
             sleep(8);
